@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body{
+    display: flex;
+    height: 100dvh;
+}
+
+aside{
+    padding: 1% 2% 0 2%;
+    background-color: #1b1b1b;
+    color: #ffffff;
+    height: 100dvh;
+}
+
+main{
+    height: 100dvh;
+
+}
+
+aside>ol{
+    padding-top: calc(20 / 16 * 1rem);
+    display: flex;
+    flex-direction: column;
+    gap: calc(10 / 16 * 1rem);
+    align-items: center;
+}
+
+.aside-title{
+    padding: calc(20 / 16 * 1rem);
+    max-width: calc(100 / 16 * 1rem);
+}
+
+.item-list{
+    padding: calc(12 / 16 * 1rem) calc(22 / 16 * 1rem);
+    list-style-type: none;
+}
+
+.item-list:hover{
+    background-color: #3d3d3d;
+    cursor: pointer;
+}
+
+.main-title{
+    padding: calc(32 / 16 * 1rem) 0 calc(22 / 16 * 1rem) calc(22 / 16 * 1rem);
+}
+
+.challenge{
+    padding: calc(18 / 16 * 1rem);
+    background-color: #c7c7c7;
+    border: solid 1px #959595;
+    margin: calc(26 / 16 * 1rem);
+    border-radius: 10px;
+    cursor: not-allowed;
+    display: none;
+}
+
+.challenge::selection{
+    background-color: transparent;
+}
+
+.challenge-show{
+    display: block;
+}
+
+.answer{
+    width: 100%;
+    max-width: calc(447 / 16 * 1rem);
+    padding: calc(8 / 16 * 1rem) calc(6 / 16 * 1rem);
+    margin: 0 0 calc(10 / 16 * 1rem) calc(26 / 16 * 1rem);
+    border: solid 2px #353535;
+    border-radius: 5px;
+}
+
+.verification-container{
+    display: flex;
+    padding: 0 calc(26 / 16 * 1rem);
+    gap: calc(22 / 16 * 1rem);
+}
+
+.time{
+    padding: calc(5 / 16 * 1rem) 0  0 calc(26 / 16 * 1rem);
+}
