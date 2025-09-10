@@ -50,12 +50,12 @@
 					nam iusto possimus consequatur totam.
 				</p>
 			</label>
-			<input placeholder="Digite o texto a cima..." class="answer" id="answer" name="answer" type="text" />
+			<input autocomplete="off" placeholder="Digite o texto a cima..." class="answer" id="answer" name="answer" type="text" />
 			<div class="verification-container">
-				<p>Letras corretas: <span>0</span></p>
-				<p>Letras erradas: <span>0</span></p>
+				<p>Letras corretas: <span id="right-letter">0</span></p>
+				<p>Letras erradas: <span id="wrong-letter">0</span></p>
 			</div>
-			<p class="time">Tempo restante: <span id="timer">60s</span></p>
+			<p class="time">Tempo restante: <span id="timer">60</span>s</p>
 		</main>
 		<script src="/javascript/app.js"></script>
 	</body>

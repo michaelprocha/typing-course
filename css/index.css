@@ -84,3 +84,15 @@ aside>ol{
 .time{
     padding: calc(5 / 16 * 1rem) 0  0 calc(26 / 16 * 1rem);
 }
+
+.right{
+    color: green;
+}
+
+.wrong{
+    color: red;
+}
+
+.neutral{
+    color: black;
+}
