@@ -29,6 +29,7 @@
 			});
 			textsChallenge[i].innerHTML = spanChar;
 			textsChallenge[i].id = "current";
+			spanChar = "";
 		}
 	});
 
