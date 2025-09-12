@@ -7,7 +7,7 @@
 	const currentRight = document.getElementById("right-letter");
 	const currentWrong = document.getElementById("wrong-letter");
 
-	let spanChar = "";
+	let spanChar = '';
 	let right = 0;
 	let wrong = 0;
 	let runTimer = 60;
@@ -18,9 +18,6 @@
 	textsChallenge.forEach((element, i) => {
 		saveTexts[i] = element.textContent.replace(/\s+/g, " ").trim();
 	});
-
-	console.log(textsChallenge);
-	console.log(saveTexts);
 
 	texts.forEach((element, i) => {
 		if (element.classList.contains("challenge-show")) {
@@ -45,9 +42,9 @@
 				});
 				texts.forEach((element, i) => {
 					if (element.classList.contains("challenge-show")) {
-						[...textsChallenge[i].textContent].forEach((char) => {
-							spanChar += `<span>${char}</span>`;
-						});
+						for (let char = 0; char < saveTexts[i].length; char++) {
+							spanChar += `<span>${saveTexts[i][char]}</span>`;
+						}
 						textsChallenge[i].innerHTML = spanChar;
 						textsChallenge[i].id = "current";
 						spanChar = "";
@@ -118,16 +115,6 @@
 		}
 	}
 
-	function endGame() {
-		const letter = [...document.querySelectorAll("#current span")];
-		if (gameOver) {
-			letter.forEach((span) => {
-				span.classList.remove("wrong");
-				span.classList.remove("right");
-			});
-		}
-	}
-
 	function winGame() {
 		const letter = [...document.querySelectorAll("#current span")];
 		const letterRight = Array.from(document.getElementsByClassName("right"));
@@ -142,6 +129,5 @@
 		count();
 		game();
 		winGame();
-		endGame();
 	});
 })();
